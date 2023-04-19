@@ -1,4 +1,4 @@
-import 'package:clorah/SignUp&Login-Screen/signup-screen/verification_screen.dart';
+import 'package:clorah/Screens/signup-screen/verification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -1,17 +1,17 @@
-import 'package:clorah/SignUp&Login-Screen/login-screen/welcome_screen.dart';
-import 'package:clorah/SignUp&Login-Screen/signup-screen/accountinfo1_screen.dart';
-import 'package:clorah/SignUp&Login-Screen/signup-screen/accountinfo2_screen.dart';
-import 'package:clorah/SignUp&Login-Screen/signup-screen/accountinfo_screen.dart';
-import 'package:clorah/SignUp&Login-Screen/signup-screen/login_screen.dart';
-import 'package:clorah/SignUp&Login-Screen/signup-screen/moreinfo_screen.dart';
-import 'package:clorah/SignUp&Login-Screen/signup-screen/successcard_screen.dart';
-import 'package:clorah/SignUp&Login-Screen/signup-screen/verification1_screen.dart';
-import 'package:clorah/SignUp&Login-Screen/signup-screen/verification_screen.dart';
+import 'package:clorah/Screens/login-screen/welcome_screen.dart';
+import 'package:clorah/Screens/signup-screen/accountinfo1_screen.dart';
+import 'package:clorah/Screens/signup-screen/accountinfo2_screen.dart';
+import 'package:clorah/Screens/signup-screen/accountinfo_screen.dart';
+import 'package:clorah/Screens/signup-screen/login_screen.dart';
+import 'package:clorah/Screens/signup-screen/moreinfo_screen.dart';
+import 'package:clorah/Screens/signup-screen/successcard_screen.dart';
+import 'package:clorah/Screens/signup-screen/verification1_screen.dart';
+import 'package:clorah/Screens/signup-screen/verification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'SignUp&Login-Screen/login-screen/signup_screen.dart';
-import 'SignUp&Login-Screen/signup-screen/moreinfo1_screen.dart';
+import 'Screens/login-screen/signup_screen.dart';
+import 'Screens/signup-screen/moreinfo1_screen.dart';
 
 void main() {
   runApp(MyApp());

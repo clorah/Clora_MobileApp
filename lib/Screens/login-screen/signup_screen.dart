@@ -1,5 +1,5 @@
-import 'package:clorah/SignUp&Login-Screen/signup-screen/login_screen.dart';
-import 'package:clorah/SignUp&Login-Screen/signup-screen/moreinfo_screen.dart';
+import 'package:clorah/Screens/signup-screen/login_screen.dart';
+import 'package:clorah/Screens/signup-screen/moreinfo_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
