@@ -8,27 +8,16 @@ class Selectcategory01Screen extends StatelessWidget {
   // const Selectcategory01Screen({Key? key}) : super(key: key);
   static const String id = 'selectcategory1_screen';
 
-  final titles = [
-    "List 1",
-    "List 2",
-    "List 3",
-    "List 4",
-    "List 5",
-    "List 6",
-    "List 7",
-    "List 8",
-    "List 9",
-  ];
-  final subtitles = [
-    {'boolVal': true, 'occupation': 'Surgery'},
-    {'boolVal': false, 'occupation': 'Pharmacy'},
-    {'boolVal': false, 'occupation': 'Dentistry'},
-    {'boolVal': false, 'occupation': 'Optometry'},
-    {'boolVal': false, 'occupation': 'Physiotherapy'},
-    {'boolVal': false, 'occupation': 'Dermatology'},
-    {'boolVal': false, 'occupation': 'ENT'},
-    {'boolVal': false, 'occupation': 'Gynecology'},
-    {'boolVal': false, 'occupation': 'Neurology'},
+  final List _subtitle1 = [
+    {'occupation': 'Surgery', 'isWhat': true},
+    {'occupation': 'Pharmacy', 'isWhat': false},
+    {'occupation': 'Dentistry', 'isWhat': false},
+    {'occupation': 'Optometry', 'isWhat': false},
+    {'occupation': 'Physiotherapy', 'isWhat': false},
+    {'occupation': 'Dermatology', 'isWhat': false},
+    {'occupation': 'ENT', 'isWhat': false},
+    {'occupation': 'Gynecology', 'isWhat': false},
+    {'occupation': 'Neurology', 'isWhat': false}
   ];
 
   @override
@@ -42,10 +31,21 @@ class Selectcategory01Screen extends StatelessWidget {
           // SizedBox(height: 20.h),
           Padding(
             padding: EdgeInsets.only(top: 60.h, left: 10.w, right: 10.w),
-            child: const Icon(
-              Icons.keyboard_backspace,
-              size: 30,
-              color: Colors.white,
+            child: TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              style: TextButton.styleFrom(
+                minimumSize: Size.zero,
+                padding: EdgeInsets.zero,
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                splashFactory: NoSplash.splashFactory,
+              ),
+              child: const Icon(
+                Icons.keyboard_backspace,
+                size: 30,
+                color: Colors.white,
+              ),
             ),
           ),
           Container(
@@ -59,70 +59,42 @@ class Selectcategory01Screen extends StatelessWidget {
             height: 600.h,
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 50.0, horizontal: 25.0),
-              child: ListView.separated(
-                  itemBuilder: (BuildContext context, int index) {
-                    return SelectedButton(
-                      onPressed: () =>
-                          Navigator.pushNamed(context, SuccessCard.id),
-                      isWhat: false,
-                      occupation: 'Hospital/Clinic',
-                    );
-                  },
-                  separatorBuilder: (BuildContext context, int index) =>
-                      const SizedBox(height: 25.0),
-                  itemCount: 10),
+                  const EdgeInsets.symmetric(vertical: 25.0, horizontal: 25.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      'Area of Specialization',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ListView.separated(
+                        itemBuilder: (BuildContext context, int index) {
+                          return SelectedButton(
+                            onPressed: () =>
+                                Navigator.pushNamed(context, SuccessCard.id),
+                            isWhat: _subtitle1[index]['isWhat'],
+                            occupation:
+                                _subtitle1[index]['occupation'].toString(),
+                          );
+                        },
+                        separatorBuilder: (BuildContext context, int index) =>
+                            const SizedBox(height: 25.0),
+                        itemCount: _subtitle1.length),
+                  ),
+                ],
+              ),
             ),
-            // SizedBox(
-            //   height: 50.h,
-            // ),
           ),
-          // child: ListView(
-          //   padding: const EdgeInsets.all(8),
-          //   children: const <Widget>[
-          //
-          //     ListTile(
-          //         title: Text("Battery Full"),
-          //         leading: Icon(Icons.battery_full),
-          //         trailing: Icon(Icons.star)),
-          //     ListTile(
-          //         title: Text("Anchor"),
-          //         leading: Icon(Icons.anchor),
-          //         trailing: Icon(Icons.star)),
-          //     ListTile(
-          //         title: Text("Alarm"),
-          //         leading: Icon(Icons.access_alarm),
-          //         trailing: Icon(Icons.star)),
-          //     ListTile(
-          //         title: Text("Ballot"),
-          //         leading: Icon(Icons.ballot),
-          //         trailing: Icon(Icons.star))
-          //   ],
-          // ),
         ],
       ),
     );
   }
 }
-
-// SelectedButton(
-// onPressed: () => null,
-// isWhat: true,
-// occupation: 'Hospital/Clinic',
-// ),
-// SizedBox(
-// height: 25.h,
-// ),
-// SelectedButton(
-// onPressed: () => null,
-// isWhat: false,
-// occupation: 'Doctor',
-// ),
-// SizedBox(
-// height: 25.h,
-// ),
-// SelectedButton(
-// onPressed: () => null,
-// isWhat: false,
-// occupation: 'Individual',
-// ),

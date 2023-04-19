@@ -43,7 +43,18 @@ class _Accountinfo1ScreenState extends State<Accountinfo1Screen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.keyboard_backspace),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        style: TextButton.styleFrom(
+                          minimumSize: Size.zero,
+                          padding: EdgeInsets.zero,
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          splashFactory: NoSplash.splashFactory,
+                        ),
+                        child: const Icon(Icons.keyboard_backspace),
+                      ),
                       SizedBox(height: 40.h),
                       const Text(
                         'Personal Information',

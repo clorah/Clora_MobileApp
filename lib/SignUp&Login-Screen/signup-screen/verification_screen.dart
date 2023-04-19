@@ -29,7 +29,18 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 20.h),
-                  const Icon(Icons.keyboard_backspace),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    style: TextButton.styleFrom(
+                      minimumSize: Size.zero,
+                      padding: EdgeInsets.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      splashFactory: NoSplash.splashFactory,
+                    ),
+                    child: const Icon(Icons.keyboard_backspace),
+                  ),
                   Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),

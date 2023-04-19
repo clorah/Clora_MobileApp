@@ -22,12 +22,25 @@ class SelectcategoryScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // SizedBox(height: 20.h),
+          // size: 30,
+          // color: Colors.white,
           Padding(
             padding: EdgeInsets.only(top: 60.h, left: 10.w, right: 10.w),
-            child: const Icon(
-              Icons.keyboard_backspace,
-              size: 30,
-              color: Colors.white,
+            child: TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              style: TextButton.styleFrom(
+                minimumSize: Size.zero,
+                padding: EdgeInsets.zero,
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                splashFactory: NoSplash.splashFactory,
+              ),
+              child: const Icon(
+                Icons.keyboard_backspace,
+                size: 30,
+                color: Colors.white,
+              ),
             ),
           ),
           Container(
