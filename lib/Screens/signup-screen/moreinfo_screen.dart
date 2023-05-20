@@ -25,7 +25,7 @@ class SelectcategoryScreen extends StatelessWidget {
           // size: 30,
           // color: Colors.white,
           Padding(
-            padding: EdgeInsets.only(top: 60.h, left: 10.w, right: 10.w),
+            padding: EdgeInsets.only(top: 80.h, left: 10.w, right: 10.w),
             child: TextButton(
               onPressed: () {
                 Navigator.pop(context);

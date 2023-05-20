@@ -7,11 +7,16 @@ import 'package:clorah/Screens/signup-screen/moreinfo_screen.dart';
 import 'package:clorah/Screens/signup-screen/successcard_screen.dart';
 import 'package:clorah/Screens/signup-screen/verification1_screen.dart';
 import 'package:clorah/Screens/signup-screen/verification_screen.dart';
+import 'package:clorah/Screens/user-account/accountdetails_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'Screens/login-screen/signup_screen.dart';
 import 'Screens/signup-screen/moreinfo1_screen.dart';
+import 'Screens/user-account/accountprofile_screen.dart';
+import 'Screens/user-account/password_screen.dart';
+import 'Screens/user-account/resetpassword_screen.dart';
+import 'Screens/user-account/shareapp_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,7 +34,8 @@ class MyApp extends StatelessWidget {
         builder: (context, _) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            initialRoute: WelcomeScreen.id,
+            initialRoute: AccountDetails.id,
+            //AccountDetails
             theme: ThemeData(
               // primarySwatch: Colors.blue,
               fontFamily: 'Inter',
@@ -46,8 +52,11 @@ class MyApp extends StatelessWidget {
               Verification01Screen.id: (context) => Verification01Screen(),
               Selectcategory01Screen.id: (context) => Selectcategory01Screen(),
               SuccessCard.id: (context) => SuccessCard(),
-              // ChatScreen.id: (context) => ChatScreen(),
-              // RegistrationScreen.id: (context) => RegistrationScreen(),
+              AccountDetails.id: (context) => AccountDetails(),
+              PasswordScreen.id: (context) => PasswordScreen(),
+              ResetPassword.id: (context) => ResetPassword(),
+              ShareAppScreen.id: (context) => ShareAppScreen(),
+              AccountProfile.id: (context) => AccountProfile(),
             },
           );
         });
