@@ -1,5 +1,3 @@
-import 'dart:developer';
-import 'dart:js_util';
 
 import 'package:clora/api_response.dart';
 import 'package:clora/routes/routes.dart';

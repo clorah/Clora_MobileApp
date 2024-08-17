@@ -29,6 +29,7 @@ import 'package:flutter/material.dart';
 
 class routeManager {
   static const String homePageOne = '/';
+  static const String slapshScreenOne = '/splashScreenOne';
   static const String slapshScreenTwo = '/splashScreenTwo';
   static const String spalshScreenThree = '/splashScreenThree';
   static const String splashScreenFour = '/splashScreenFour';
@@ -51,7 +52,10 @@ class routeManager {
     switch (settings.name) {
       case homePageOne:
         return MaterialPageRoute(
-            builder: ((context) => const fetch()));
+            builder: ((context) => const mainhomescreenone()));
+      case slapshScreenOne:
+        return MaterialPageRoute(
+            builder: ((context) => const splash_screen_one()));
       case slapshScreenTwo:
         return MaterialPageRoute(
             builder: ((context) => const splash_screen_two()));
